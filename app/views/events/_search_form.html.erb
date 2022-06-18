@@ -9,7 +9,7 @@
   <div class="search-source">
     <%= f.radio_button :source_eq, '' %>All
     <%= f.radio_button :source_eq, 'berghain' %>berghain
-    <%= f.radio_button :source_eq, 'iheartberlin' %>iheartberlin
+    <%= f.radio_button :source_eq, 'co-berlin' %>co-berlin
   </div>
 
   <div class="search-calender">
@@ -20,5 +20,6 @@
 
   <span class="search-btn">
     <%= f.submit 'Search', class: "btn btn-primary" %>
+    <%= link_to "Clear", root_path, {class: "btn"} %>
   </span>
 <% end %>
