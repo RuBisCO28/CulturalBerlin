@@ -10,5 +10,9 @@
 #
 FactoryBot.define do
   factory :event do
+    date { Time.zone.now.to_date }
+    sequence(:name) { |n| "event_#{n}" }
+    sequence(:source) { |n| "source_#{n}" }
+    sequence(:url) { |n| "url_#{n}" }
   end
 end

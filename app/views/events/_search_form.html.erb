@@ -1,0 +1,24 @@
+<%= search_form_for @q do |f| %>
+  <%= f.label :name_cont, 'Event Search' %>
+  <div class="input-group">
+  <%= f.text_field :name_cont, placeholder: "Enter eventname...",
+                      class: 'form-control' %>
+  </div>
+
+  <%= f.label :source_eq, 'Source' %>
+  <div class="search-source">
+    <%= f.radio_button :source_eq, '' %>All
+    <%= f.radio_button :source_eq, 'berghain' %>berghain
+    <%= f.radio_button :source_eq, 'iheartberlin' %>iheartberlin
+  </div>
+
+  <div class="search-calender">
+    <%= f.date_field :date_gteq%>
+    <span>~</span>
+    <%= f.date_field :date_lteq%>
+  </div>
+
+  <span class="search-btn">
+    <%= f.submit 'Search', class: "btn btn-primary" %>
+  </span>
+<% end %>
