@@ -1,24 +1,38 @@
-# README
+# Cultural Berlin
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+`Cultural Berlin` is a service that collects all the cultural activities in Berlin into one site.  
+There are two resources that can provide you with this information.
 
-Things you may want to cover:
+# Web Resources
+- CO Berlin(https://co-berlin.org/en/program/calendar)
+- Berghain(https://www.berghain.berlin/en/program/)
 
-* Ruby version
+# DB table
+|  Key  |  Type  |  Description  |
+| ---- | ---- | ---- |
+|  id  |  bigint  | ID(primary key) |
+|  date  |  Date  | event date |
+|  name  |  string  | event name |
+|  source  |  string  | web source |
+|  url  |  string  | event url |
 
-* System dependencies
+# Features:
 
-* Configuration
+## Search events
+- Search Keys
+  - Event name
+  - Event date
+  - Web source
 
-* Database creation
+## Update event info automatically
+- daily update
 
-* Database initialization
+# Tech:
+- Ruby on Rails
+  - Ruby: 3.1.1
+  - Rails: 6.1.6
+- PostgreSQL
+- Docker
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Development
+- ./bin/update.sh
