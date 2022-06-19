@@ -7,7 +7,7 @@ class EventsController < ApplicationController
       @q = Event.ransack(activated_true: true)
       @title = "All events"
     end
-    @events = @q.result.paginate(page: params[:page])
+    @events = @q.result.order(date: :desc).paginate(page: params[:page])
   end
 
   private

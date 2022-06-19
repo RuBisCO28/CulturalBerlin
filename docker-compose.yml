@@ -23,5 +23,27 @@ services:
       POSTGRES_HOST: $POSTGRES_HOST
       POSTGRES_USER: $POSTGRES_USER
       POSTGRES_PASSWORD: $POSTGRES_PASSWORD
+      REDIS_URL: "redis://redis:6379"
     depends_on:
       - db
+      - redis
+
+  worker:
+    build: .
+    environment:
+      - "REDIS_URL=redis://redis:6379"
+    volumes:
+      - ".:/var/myapp"
+    depends_on:
+      - "redis"
+    command: sidekiq
+
+  redis:
+    image: redis:4.0
+    volumes:
+      - "redis:/data"
+    command: redis-server --appendonly yes
+
+volumes:
+  redis:
+    driver: local
