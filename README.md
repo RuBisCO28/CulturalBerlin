@@ -3,6 +3,9 @@
 `Cultural Berlin` is a service that collects all the cultural activities in Berlin into one site.  
 There are two resources that can provide you with this information.
 
+# Production url
+- https://culturalberlin.herokuapp.com/
+
 # Web Resources
 - CO Berlin(https://co-berlin.org/en/program/calendar)
 - Berghain(https://www.berghain.berlin/en/program/)
@@ -25,7 +28,7 @@ There are two resources that can provide you with this information.
   - Web source
 
 ## Update event info automatically
-- daily update
+- Update event info by Sidekiq
 
 # Tech:
 - Ruby on Rails
