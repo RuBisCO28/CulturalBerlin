@@ -12,7 +12,7 @@ class FetchWorker
   COBERLIN_CALENDER_URL = "https://co-berlin.org/en/program/calendar".freeze
 
   def perform(*_args)
-    # fetch_berghain_events
+    fetch_berghain_events
     fetch_coberlin_events
   end
 
