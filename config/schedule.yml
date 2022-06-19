@@ -1,0 +1,4 @@
+fetch_job:
+  cron: "*/60 * * * *"
+  class: "FetchWorker"
+  queue: fetch
